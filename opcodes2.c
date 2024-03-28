@@ -56,7 +56,7 @@ void div_top_nodes(stack_t **stack, unsigned int line_number)
 
 	if ((*stack)->n == 0)
 		detailed_err(9, line_number);
-	(*stack) = (*stack)->next;
+	(*stack) = (*stack)->prev;
 	sum = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = sum;
 	free((*stack)->prev);
